@@ -4,7 +4,7 @@
     <meta charset="UTF-8" author="Lucas Nguyen"></meta>
     <title> LectureExampleSorting</title>
     <style>
-      button{
+      button:hover{
 	  color: white;
 	  background-color: green;
       }
@@ -18,10 +18,13 @@
 	  } else{
  	      document.getElementById("first_Name").style.backgroundColor=null;
 	      document.getElementById("outputArr").innerHTML=generateSequence(first_name);
+        document.querySelectorAll("input").forEach(
+          (input_tag) => {input_tag.disabled ="true";}
+        );
 	  }
 	  
 	  
-      }
+    }
       function generateSequence(name){
 	  let nameArr = [ ];
 	  nameArr.push(name.charCodeAt(0));
