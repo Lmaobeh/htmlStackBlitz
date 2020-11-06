@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta author= "Lucas Nguyen"></meta>
+    <title>CSS Notes </title>
+    <style>
+      h3{
+	  color: black;
+      }
+      h1,h2{
+	  color: blue;
+      }
+      li a{
+	  color: red;
+      }
+      li > a{
+	  color:green;
+      }
+      ul + h3{
+	  color:purple;
+      }
+    </style>
+  </head>
+  <h1> What is css</h1>
+  <p> It stands for cascading style sheets standardizes how styles are applied to the web page. </p>
+  <h2>In what order are the style rules are applied? </h2>
+  <ol>
+    <li> Browser defaults</li>
+    <li> Style tag information</li>
+    <li> Inline style in tags </li>
+  </ol>
+  <p> The scope gets smaller as you go down the list. However, each overrides eachother. So if define stlye information for all headers but want to override that I could add inline stlye tags</p>
+  <h3>Style tags</h3>
+  <p><b>basic syntax:</b> h3 is called a selector because it selects the h3 tag to apply the style attribute to. </p>
+  <code> <pre>
+      &lt style &gt
+      &Tab; h3 &lcub;
+      &Tab; &Tab; Color: black;
+      &Tab; &rcub;
+      &lt /style &gt
+    </pre>
+  </code>
+  <p><b>Selecting multiple tags:</b> this makes H1 and h2 </p>
+  <code> <pre>
+      &lt style &gt
+      &Tab; h1, h2 &lcub;
+      &Tab; &Tab; Color: blue;
+      &Tab; &rcub;
+      &lt /style &gt
+    </pre>
+  </code>
+  <p><b> defining decendind infomration:</b> as you can see, the first code piece turns all link that are in a list item enviroment. But the second one requres that the link enviroment be right after it </p>
+  <code> <pre>
+      &lt style &gt
+      &Tab; li a &lcub;
+      &Tab; &Tab; Color: red;
+      &Tab; &rcub;
+      &lt /style &gt
+    </pre>
+  </code>
+  <code> <pre>
+      &lt style &gt
+      &Tab; li > a &lcub;
+      &Tab; &Tab; Color: green;
+      &Tab; &rcub;
+      &lt /style &gt
+    </pre>
+  </code>
+  <ul>
+    <li><a href="www.google.com"> red google link</a></li>
+    <li><p><a href="google.com"> green google link because link not directly after the list enviroment tag</a></p></li>
+  </ul>
+  <h3> this heading is purple because after ordered list</h3>
+  <p> the code below makes all header 3s that come after a unorderd list purple 
+  <code> <pre>
+      &lt style &gt
+      &Tab; h3 &lcub;
+      &Tab; &Tab; Color: purple
+      &Tab; &rcub;
+      &lt /style &gt
+    </pre>
+  </code>
+
+  <h2>Defining css in a different file</h2>
+  <p> if we have multiple sub pages, it becomes a hassle to copy the style information into every subpage html file. Duplication is never a good solution. .CSS files offer a central place to store the style information.<br>
+    Style file: contains the contents of the style tags<br>
+    Linking in the html file: rel attribute: relation type atrribute: text file with css, href atribute: link to the style file
+  <code><pre>
+      &lt head &hgt
+      &Tab; &lt link rel="stylesheet" type="text/css" href="path to .css" &gt
+    </pre>
+  </code>
+  <h2>Other selectors</h2>
+  <p> how do we make a highlight style? using css class selectors. We can define a class in css file using <code> .className{style for this class}</code> we can then give tags in the html file a class attribute <code> &lt class="className" &gt lipsum &lt /p &gt </code>.
+    <p> id selectors: allow you to give a specific tag an id atribute and then define style for that tag in the css file using the following syntax <code> #id{} </code>.
+</body>
+  
+      
+
+</html>
