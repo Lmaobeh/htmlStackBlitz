@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang-"en-US">
+  <head>
+    <meta charset="UTF-8" author="Lucas Nguyen"></meta>
+    <title> LectureExampleSorting</title>
+    <style>
+      button{
+	  color: white;
+	  background-color: green;
+      }
+    </style>
+    <script>
+      function buttonClicked(){
+	  let first_name=document.getElementById("first_Name").value;
+	  console.log(first_name);
+	  if(first_name.length < 2){
+	      document.getElementById("first_Name").style.backgroundColor="red";
+	  } else{
+ 	      document.getElementById("first_Name").style.backgroundColor=null;
+	      document.getElementById("outputArr").innerHTML=generateSequence(first_name);
+	  }
+	  
+	  
+      }
+      function generateSequence(name){
+	  let nameArr = [ ];
+	  nameArr.push(name.charCodeAt(0));
+	  nameArr.push(name.charCodeAt(1));
+	  return nameArr;
+      }
+    </script>
+    
+  </head>
+
+  <body>
+    <h1> Random Sequence </h1>
+    <p> First name <input id="first_Name"></input> </p>
+    <button onclick="buttonClicked()"> Generate sq </button>
+    <p> Your seq: <span id="outputArr"></span> </p>
+  </body>
+</html>
