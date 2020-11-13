@@ -1,8 +1,34 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="objectsExampleScript.js"></script>
+    <style>
+      code pre{
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+    }
+      </style>
   </head>
-  <body>
-    <h2>oh whaaa!</h2>
+  <body onload="run()">
+
+    <h2>Objects example</h2>
+    <p> objects in js work alot like a hashmap in java</p>
+    <h3> Example notation one </h3>
+    <code> <pre>
+      //object notation one
+      let a = { };
+      a.field1 = "feild1";
+      //key value pair notation
+      a["feild2"] = "feild2";
+      a.arrayFeild = [1,2,3];
+      a.printObject = function (){
+        return this.field1 + " " + this.feild2 + "\n Array" + this.arrayFeild;
+      }
+      </pre>
+    </code>
+    <h4>Change
+    <span id = "change"></span>
+    
   </body>
 </html>
