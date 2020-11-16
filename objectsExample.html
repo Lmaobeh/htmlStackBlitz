@@ -18,17 +18,44 @@
     <code> <pre>
       //object notation one
       let a = { };
-      a.field1 = "feild1";
+      a.feild1 = "feild1";
       //key value pair notation
       a["feild2"] = "feild2";
       a.arrayFeild = [1,2,3];
       a.printObject = function (){
-        return this.field1 + " " + this.feild2 + "\n Array" + this.arrayFeild;
+        return this.feild1 + " " + this.feild2 + "\n Array" + this.arrayFeild;
       }
       </pre>
     </code>
-    <h4>Change
-    <span id = "change"></span>
-    
+    <h4>printing the object</h4>
+    <p>Code:<code> console.log(a)</code> or <code> JSON.stringfy(a)</code></p> 
+    <p>Console Output: <code><span id = "aOutput"> </code></span></p>
+    <h4> Getting a feild value </h4>
+    <p>Code: <code> Console.log(a.feild1) </code> or <code> Console.log(a["feild2"])</code></p>
+    <p>Console out: <code><span id = "feildOut"></span></code></p>
+    <h4>Printing function vs runnung </h4>
+    <p>Printing code: <code> console.log(a.printObject)</code></p>
+    <p>Running  code: <code> console.log(a.printObject())</code></p>
+    <p>Console printing function: <code><span id = print></span></code> </p>
+    <p>Console running function: <code><span id = run></span></code> </p>
+    <h2>Example notation 2</h2>
+    <p>Similar to anonymous class notation. Every feild is followed by a comma. The last feild doesnt require one</p>
+    <code> <pre>
+      //Object notation two
+      let b = { 
+        feild1: "hello",
+        array: [1,2,3],
+        printObject: function(){
+          return this.feild1+" " + this.array;
+        },
+        objectFeild:  c= {
+          cfeild: "hello"
+        }
+      }
+      </pre>
+    </code>
+    <h4> getting object feild c</h4>
+    <p>Printing code: <code> console.log(b.objectFeild.cfeild)</code></p>
+    <p>Running  code: <code> <span id = "objectFeild"></span></code></p>
   </body>
 </html>
